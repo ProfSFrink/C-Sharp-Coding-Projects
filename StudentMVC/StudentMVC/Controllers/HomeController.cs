@@ -6,6 +6,7 @@
 // AUTHOR: Steven Partlow
 // DATE: 26/02/2023
 
+using StudentMVC.Models;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -39,12 +40,42 @@ namespace StudentMVC.Controllers
         {
             ViewBag.Id = id; // Add value of id to ViewBag dictionary
 
-            return View(); // Return Instructor view
+            Instructor dayTimeInstructor = new Instructor // Instaniate a new instance of the Instructor class called dayTimeInstructor
+            {
+                Id = 1, // Set the Id property
+                FirstName = "Erik", // Set the FirstName Property
+                LastName = "Gross" // Set the LastName Property
+            }; // END Instantiation Instructor
+
+            return View(dayTimeInstructor); // Return Instructor view
         } // END Instructor
          
         public ActionResult Instructors()
         {
-            return View();
+
+            List<Instructor> instructors = new List<Instructor> // Instatiate a new List called instructors consisting of Intructor objects and add three objects to the list
+            {
+                new Instructor // Add a new instructor to the list with these properties
+                {
+                    Id = 1,
+                    FirstName = "Rick",
+                    LastName = "Ramen"
+                },
+                new Instructor // Add a new instructor to the list with these properties
+                {
+                    Id = 2,
+                    FirstName = "Brett",
+                    LastName = "Calendar"
+                },
+                new Instructor // Add a new instructor to the list with these properties
+                {
+                    Id = 3,
+                    FirstName = "Adam",
+                    LastName = "Smithsonian"
+                }
+            }; // End Instaniation of instructors list
+
+            return View(instructors);
         } // END Instructors
     }
 }
