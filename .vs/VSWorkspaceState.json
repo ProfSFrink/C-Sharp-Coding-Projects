@@ -1,7 +1,13 @@
 {
   "ExpandedNodes": [
-    ""
+    "",
+    "\\StudentMVC",
+    "\\StudentMVC\\StudentMVC",
+    "\\StudentMVC\\StudentMVC\\Controllers",
+    "\\StudentMVC\\StudentMVC\\Views",
+    "\\StudentMVC\\StudentMVC\\Views\\Home",
+    "\\TwentyOne\\TwentyOne"
   ],
-  "SelectedNode": "\\Readme.md",
+  "SelectedNode": "\\StudentMVC\\StudentMVC.sln",
   "PreviewInSolutionExplorer": false
 }
