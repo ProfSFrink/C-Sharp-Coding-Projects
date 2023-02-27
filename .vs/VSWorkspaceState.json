@@ -5,9 +5,7 @@
     "\\StudentMVC\\StudentMVC",
     "\\StudentMVC\\StudentMVC\\Controllers",
     "\\StudentMVC\\StudentMVC\\Views",
-    "\\StudentMVC\\StudentMVC\\Views\\Home",
-    "\\TwentyOne\\TwentyOne"
+    "\\StudentMVC\\StudentMVC\\Views\\Home"
   ],
-  "SelectedNode": "\\StudentMVC\\StudentMVC.sln",
   "PreviewInSolutionExplorer": false
 }

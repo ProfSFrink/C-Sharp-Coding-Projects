@@ -5,3 +5,6 @@ This repository covers the main projects done as part of the C# and .NET Framewo
 
 ## MVC Application - Students
 An application developed over eleven parts to show our understanding of the Model-View-Controller desgin pattern and demonstrate what we learned in the MVC Tutorial.
+
+## MVC Sample Application
+A ten-part video series developing a MVC Web application that allows a user to sign up to a newsletter.
