@@ -13,6 +13,14 @@ namespace NewsletterAppMVC.Controllers
             return View();
         }
 
+        [HttpPost] // The below method is a post
+
+        // Take the three inputs from the Sign Up web form and map them into each input parameter
+        public ActionResult SignUp(string FirstName, string LastName, string EmailAddress)
+        {
+            return null;
+        } // END SignUp METHOD
+
         public ActionResult About()
         {
             ViewBag.Message = "Your application description page.";
