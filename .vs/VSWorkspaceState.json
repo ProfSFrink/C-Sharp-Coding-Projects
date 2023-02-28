@@ -3,8 +3,10 @@
     "",
     "\\NewsletterAppMVC",
     "\\NewsletterAppMVC\\NewsletterAppMVC",
-    "\\NewsletterAppMVC\\NewsletterAppMVC\\Controllers"
+    "\\NewsletterAppMVC\\NewsletterAppMVC\\Controllers",
+    "\\NewsletterAppMVC\\NewsletterAppMVC\\Views",
+    "\\NewsletterAppMVC\\NewsletterAppMVC\\Views\\Home"
   ],
-  "SelectedNode": "\\NewsletterAppMVC\\NewsletterAppMVC.sln",
+  "SelectedNode": "\\NewsletterAppMVC\\NewsletterAppMVC\\Views\\Home\\Index.cshtml",
   "PreviewInSolutionExplorer": false
 }
