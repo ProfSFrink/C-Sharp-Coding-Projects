@@ -1,7 +1,10 @@
 {
   "ExpandedNodes": [
-    ""
+    "",
+    "\\NewsletterAppMVC",
+    "\\NewsletterAppMVC\\NewsletterAppMVC",
+    "\\NewsletterAppMVC\\NewsletterAppMVC\\Controllers"
   ],
-  "SelectedNode": "\\NewsletterAppMVC.sln",
+  "SelectedNode": "\\NewsletterAppMVC\\NewsletterAppMVC.sln",
   "PreviewInSolutionExplorer": false
 }

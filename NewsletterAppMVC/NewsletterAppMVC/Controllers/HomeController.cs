@@ -25,6 +25,7 @@ namespace NewsletterAppMVC.Controllers
             } // End IF
             else
             {
+                string connectionString = @"Data Source=DESKTOP-1NJ3EK9\SQLEXPRESS;Initial Catalog=Newsletter;Integrated Security=True;Connect Timeout=30;Encrypt=False;TrustServerCertificate=False;ApplicationIntent=ReadWrite;MultiSubnetFailover=False";
                 return View("Success"); // If all inputs are valid return view Success.cshtml
             } // End ELSE
         } // END SignUp METHOD
