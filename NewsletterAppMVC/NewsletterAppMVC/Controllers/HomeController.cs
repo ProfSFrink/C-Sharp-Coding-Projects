@@ -8,8 +8,10 @@ using System.Web.Mvc;
 
 namespace NewsletterAppMVC.Controllers
 {
+
     public class HomeController : Controller
     {
+
         public ActionResult Index()
         {
             return View();
@@ -59,18 +61,11 @@ namespace NewsletterAppMVC.Controllers
 
         } // END SignUp METHOD
 
-        public ActionResult About()
+        public ActionResult Admin()
         {
-            ViewBag.Message = "Your application description page.";
-
             return View();
-        }
+        } // End Admin METHOD
 
-        public ActionResult Contact()
-        {
-            ViewBag.Message = "Your contact page.";
-
-            return View();
-        }
     }
+
 }
