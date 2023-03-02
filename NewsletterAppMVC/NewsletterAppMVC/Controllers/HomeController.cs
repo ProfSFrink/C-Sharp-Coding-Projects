@@ -7,6 +7,7 @@
 // DATE: 02/03/2023
 
 using NewsletterAppMVC.Models;
+using NewsletterAppMVC.ViewModels;
 using System;
 using System.Collections.Generic;
 using System.Data;
@@ -71,7 +72,7 @@ namespace NewsletterAppMVC.Controllers
 
         public ActionResult Admin()
         {
-            string queryString = @"SELECT Id, FirstName, LastName, EmailAddress FROM SignUps"; // This queryString will select all records within the database
+            string queryString = @"SELECT Id, FirstName, LastName, EmailAddress, SocialSecurityNumber FROM SignUps"; // This queryString will select all records within the database
 
             List<NewsletterSignUp> signups = new List<NewsletterSignUp>(); // An empty list containing instances of our NewsletterSignUp model (class)
 
@@ -87,16 +88,27 @@ namespace NewsletterAppMVC.Controllers
                 {
                     var signup = new NewsletterSignUp(); // Create a new instance of the NewsLetterSignUp model and call it signup
 
-                    signup.Id = Convert.ToInt32(reader["Id"]); // Take the current records Id column and assign to the signup.Id property after casting it to a integer
-                    signup.FirstName = reader["FirstName"].ToString(); // Take the current records FirstName column and assign to the signup.FirstName property after casting it to a string
-                    signup.LastName = reader["LastName"].ToString(); // Take the current records LastName column and assign to the signup.LastName property after casting it to a string
-                    signup.EmailAddress = reader["EmailAddress"].ToString(); // Take the current records EmailAddress column and assign to the signup.EmailAddress property after casting it to a string
+                    signup.Id = Convert.ToInt32(reader["Id"]); // Take the current records Id column and assign it to the signup.Id property after casting it to a integer
+                    signup.FirstName = reader["FirstName"].ToString(); // Take the current records FirstName column and assign ut to the signup.FirstName property after casting it to a string
+                    signup.LastName = reader["LastName"].ToString(); // Take the current records LastName column and assign it to the signup.LastName property after casting it to a string
+                    signup.EmailAddress = reader["EmailAddress"].ToString(); // Take the current records EmailAddress column and assign it to the signup.EmailAddress property after casting it to a string
+                    signup.SocialSecurityNumber = reader["SocialSecurityNumber"].ToString(); // Take the current records SocialSecurityNumber column and assign it to the signup.SocialSecurityNumber property after casting it to a string
 
                     signups.Add(signup); // Add the signup instance of the NewsletterSignUp model to the signups list
                 } // End WHILE
-            }
+            } // End USING
 
-            return View(signups);
+            var signupVms = new List<SignupVm>(); // Create list of SignupVm view model objects
+            foreach (var signup in signups) // Take the signups list and iterate through it assigning each instance to a local variable signup
+            {
+                var signupVm = new SignupVm(); // Create a local instance of the signupVm view model
+                signupVm.FirstName = signup.FirstName; // Map the current instance of signup.FirstName to signupVm.FirstName
+                signupVm.LastName = signup.LastName; // Map the current instance of signup.LastName to signupVm.LastName
+                signupVm.EmailAddress = signup.EmailAddress; // Map the current instance of signup.EmailAddress to signupVm.EmailAddress
+                signupVms.Add(signupVm); // Take the local instance signupVm and add it to our main signupVms list
+            } // End FOREACH
+
+            return View(signupVms); // Pass the signupVms to the view
         } // End Admin METHOD
 
     }
