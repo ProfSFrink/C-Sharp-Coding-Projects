@@ -1,4 +1,13 @@
-﻿using System;
+﻿// Advanced Software and Web Developer Diploma
+// Part X: C# and .NET Framework - Part 2
+// by Pitman Training / The Tech Academy
+
+// MODULE 11: Creating MVC Applications
+// AUTHOR: Steven Partlow
+// DATE: 02/03/2023
+
+using NewsletterAppMVC.Models;
+using System;
 using System.Collections.Generic;
 using System.Data;
 using System.Data.SqlClient;
@@ -11,6 +20,8 @@ namespace NewsletterAppMVC.Controllers
 
     public class HomeController : Controller
     {
+        // Our connection string so we can connect to our database
+        private readonly string connectionString = @"Data Source=PROFSFRINK-PC\SQLEXPRESS;Initial Catalog=db_Newsletter;Integrated Security=True;Connect Timeout=30;Encrypt=False;TrustServerCertificate=False;ApplicationIntent=ReadWrite;MultiSubnetFailover=False";
 
         public ActionResult Index()
         {
@@ -29,9 +40,6 @@ namespace NewsletterAppMVC.Controllers
             } // End IF
             else
             {
-                // Our connection string so we can connect to our database
-                string connectionString = @"Data Source=PROFSFRINK-PC\SQLEXPRESS;Initial Catalog=db_Newsletter;Integrated Security=True;Connect Timeout=30;Encrypt=False;TrustServerCertificate=False;ApplicationIntent=ReadWrite;MultiSubnetFailover=False";
-
                 // A SQL query store as a string will add the three method input parameters to the matching columns in our SignUps table in our Newsletter database
                 string queryString = @"INSERT INTO SignUps (FirstName, LastName, EmailAddress) VALUES
                                         (@FirstName, @LastName, @EmailAddress)";
@@ -63,7 +71,32 @@ namespace NewsletterAppMVC.Controllers
 
         public ActionResult Admin()
         {
-            return View();
+            string queryString = @"SELECT Id, FirstName, LastName, EmailAddress FROM SignUps"; // This queryString will select all records within the database
+
+            List<NewsletterSignUp> signups = new List<NewsletterSignUp>(); // An empty list containing instances of our NewsletterSignUp model (class)
+
+            using (SqlConnection connection = new SqlConnection(connectionString)) // Open a new SQL connectio using our connectionString
+            {
+                SqlCommand command = new SqlCommand(queryString, connection); // Create a new SqlCommand object using queryString and connection
+
+                connection.Open(); // Open the SQL connection
+
+                SqlDataReader reader = command.ExecuteReader(); // Create a new SqlDataReader object and store the data retrieved by our SQL command within it 
+
+                while (reader.Read()) // Keep iterating until there are no more records to read
+                {
+                    var signup = new NewsletterSignUp(); // Create a new instance of the NewsLetterSignUp model and call it signup
+
+                    signup.Id = Convert.ToInt32(reader["Id"]); // Take the current records Id column and assign to the signup.Id property after casting it to a integer
+                    signup.FirstName = reader["FirstName"].ToString(); // Take the current records FirstName column and assign to the signup.FirstName property after casting it to a string
+                    signup.LastName = reader["LastName"].ToString(); // Take the current records LastName column and assign to the signup.LastName property after casting it to a string
+                    signup.EmailAddress = reader["EmailAddress"].ToString(); // Take the current records EmailAddress column and assign to the signup.EmailAddress property after casting it to a string
+
+                    signups.Add(signup); // Add the signup instance of the NewsletterSignUp model to the signups list
+                } // End WHILE
+            }
+
+            return View(signups);
         } // End Admin METHOD
 
     }
