@@ -118,3 +118,7 @@ C:\Users\ProfS\source\repos\C-Sharp Coding Projects\NewsletterAppMVC\NewsletterA
 C:\Users\ProfS\source\repos\C-Sharp Coding Projects\NewsletterAppMVC\NewsletterAppMVC\obj\Debug\NewsletterAppMVC.dll
 C:\Users\ProfS\source\repos\C-Sharp Coding Projects\NewsletterAppMVC\NewsletterAppMVC\obj\Debug\NewsletterAppMVC.pdb
 C:\Users\ProfS\source\repos\C-Sharp Coding Projects\NewsletterAppMVC\NewsletterAppMVC\obj\Debug\NewsletterAppMVC.csproj.AssemblyReference.cache
+C:\Users\ProfS\source\repos\C-Sharp Coding Projects\NewsletterAppMVC\NewsletterAppMVC\bin\EntityFramework.dll
+C:\Users\ProfS\source\repos\C-Sharp Coding Projects\NewsletterAppMVC\NewsletterAppMVC\bin\EntityFramework.SqlServer.dll
+C:\Users\ProfS\source\repos\C-Sharp Coding Projects\NewsletterAppMVC\NewsletterAppMVC\bin\EntityFramework.xml
+C:\Users\ProfS\source\repos\C-Sharp Coding Projects\NewsletterAppMVC\NewsletterAppMVC\bin\EntityFramework.SqlServer.xml
