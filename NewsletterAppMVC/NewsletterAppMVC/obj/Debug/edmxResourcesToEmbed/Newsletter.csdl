@@ -8,7 +8,7 @@
     <Property Name="FirstName" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
     <Property Name="LastName" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
     <Property Name="EmailAddress" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
-    <Property Name="SocialSecurityNumber" Type="String" MaxLength="15" FixedLength="false" Unicode="false" />
+    <Property Name="Removed" Type="DateTime" Precision="3" />
   </EntityType>
   <EntityContainer Name="db_NewsletterEntities" annotation:LazyLoadingEnabled="true">
     <EntitySet Name="SignUps" EntityType="Self.SignUp" />

@@ -1,23 +1,26 @@
 ﻿<!-- Advanced Software and Web Developer Diploma -->
 <!-- Part X: C# and .NET Framework - Part 2 -->
 <!-- by Pitman Training / The Tech Academy -->
-
-<!-- MODULE 11: Creating MVC Applications -->
+<!-- MODULE 12: Continuing to Develop in C# and MVC -->
 <!-- AUTHOR: Steven Partlow -->
-<!-- DATE: 01/03/2023 -->
+<!-- DATE: 06/03/2023 -->
 
 @using NewsletterAppMVC.ViewModels <!-- Use the models defined in our Models folder -->
 @model List<SignupVm> /* Create a list of the NewsletterSignUp class */
-                              
-<div class="row no-gutters m-3"> <!-- Create a row with no margin on either side and 3em margin at the top and bottom -->
 
-    <div class="card col-sm-12 col-md-10 col-lg-6 mx-auto shadow"> <!-- Create a card which scale the number of columns depending on the size of the display that is auto-centered and has a shadow effect-->
+<div class="row no-gutters m-3">
+    <!-- Create a row with no margin on either side and 3em margin at the top and bottom -->
 
-        <div class="card-header text-center"> <!-- Card header with h5 tag and no margin again centering the text -->
+    <div class="card col-sm-12 col-md-10 col-lg-6 mx-auto shadow">
+        <!-- Create a card which scale the number of columns depending on the size of the display that is auto-centered and has a shadow effect-->
+
+        <div class="card-header text-center">
+            <!-- Card header with h5 tag and no margin again centering the text -->
             <h5 class="m-0">Sign-ups</h5>
         </div> <!-- END DIV Card header -->
 
-        <div class="card-body"> <!-- The body of the card -->
+        <div class="card-body">
+            <!-- The body of the card -->
             @foreach (var signup in Model) /* Assign each instance of the NewsletterSignUp list from our Model to the variable signup */
             {
                 <div class="row">
@@ -41,11 +44,8 @@
                 </div> <!-- END DIVE SignUp Row -->
             }
 
-
         </div> <!-- END DIV Card Body -->
 
     </div> <!-- END DIVE Card -->
 
 </div> <!-- END DIVE Row-->
-
-

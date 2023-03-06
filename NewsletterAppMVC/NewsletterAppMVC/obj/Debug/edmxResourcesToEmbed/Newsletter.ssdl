@@ -8,7 +8,7 @@
     <Property Name="FirstName" Type="varchar" MaxLength="50" />
     <Property Name="LastName" Type="varchar" MaxLength="50" />
     <Property Name="EmailAddress" Type="varchar" MaxLength="100" />
-    <Property Name="SocialSecurityNumber" Type="varchar" MaxLength="15" />
+    <Property Name="Removed" Type="datetime" />
   </EntityType>
   <EntityContainer Name="db_NewsletterModelStoreContainer">
     <EntitySet Name="SignUps" EntityType="Self.SignUps" Schema="dbo" store:Type="Tables" />
