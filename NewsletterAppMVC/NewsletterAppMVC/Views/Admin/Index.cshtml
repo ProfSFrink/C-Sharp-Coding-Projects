@@ -1,6 +1,7 @@
 ﻿<!-- Advanced Software and Web Developer Diploma -->
 <!-- Part X: C# and .NET Framework - Part 2 -->
 <!-- by Pitman Training / The Tech Academy -->
+
 <!-- MODULE 12: Continuing to Develop in C# and MVC -->
 <!-- AUTHOR: Steven Partlow -->
 <!-- DATE: 06/03/2023 -->
@@ -23,25 +24,36 @@
             <!-- The body of the card -->
             @foreach (var signup in Model) /* Assign each instance of the NewsletterSignUp list from our Model to the variable signup */
             {
-                <div class="row">
-                    <!-- Create a row on the page -->
+                using (Html.BeginForm("Unsubscribe", "Admin", FormMethod.Post))
+                {
+                    <div class="row">
+                        <!-- Create a row on the page -->
 
-                    <div class="col">
-                        <!-- In this column, display the FirstName property of the current instance of the Model in signup -->
-                        @signup.FirstName
-                    </div> <!-- END DIV FirstName -->
+                        <div class="col">
+                            <!-- In this column, display the FirstName property of the current instance of the Model in signup -->
+                            @signup.FirstName
+                        </div> <!-- END DIV FirstName -->
 
-                    <div class="col">
-                        <!-- In this column, display the LastName property of the current instance of the Model in signup -->
-                        @signup.LastName
-                    </div> <!-- END DIV LastName -->
+                        <div class="col">
+                            <!-- In this column, display the LastName property of the current instance of the Model in signup -->
+                            @signup.LastName
+                        </div> <!-- END DIV LastName -->
 
-                    <div class="col">
-                        <!-- In this column, display the EmailAddress property of the current instance of the Model in signup -->
-                        @signup.EmailAddress
-                    </div> <!-- END DIV EmailAddress -->
+                        <div class="col">
+                            <!-- In this column, display the EmailAddress property of the current instance of the Model in signup -->
+                            @signup.EmailAddress
+                        </div> <!-- END DIV EmailAddress -->
 
-                </div> <!-- END DIVE SignUp Row -->
+                        <div class = "col">
+                            <!-- In this column, display a button called Unsubscribe  -->
+                            <button type="submit" class="btn btn-danger btn-block">
+                                Unsubscribe
+                            </button> <!-- END BUTTON Unsubscribe -->
+                        </div> <!-- END DIV Unsubscribe -->
+
+                    </div> <!-- END DIVE SignUp Row -->
+                }
+
             }
 
         </div> <!-- END DIV Card Body -->

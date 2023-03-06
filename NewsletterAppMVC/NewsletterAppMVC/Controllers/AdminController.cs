@@ -6,6 +6,7 @@
 // AUTHOR: Steven Partlow
 // DATE: 06/03/2023
 
+using NewsletterAppMVC.Models;
 using NewsletterAppMVC.ViewModels;
 using System;
 using System.Collections.Generic;
@@ -33,6 +34,7 @@ namespace NewsletterAppMVC.Controllers
                 foreach (var signup in signups) // Take the signups list and iterate through it assigning each instance to a local variable signup
                 {
                     var signupVm = new SignupVm(); // Create a local instance of the signupVm view model
+                    signupVm.Id = signup.Id; // Map the current instance of signup.Id to signupVm.Id
                     signupVm.FirstName = signup.FirstName; // Map the current instance of signup.FirstName to signupVm.FirstName
                     signupVm.LastName = signup.LastName; // Map the current instance of signup.LastName to signupVm.LastName
                     signupVm.EmailAddress = signup.EmailAddress; // Map the current instance of signup.EmailAddress to signupVm.EmailAddress
