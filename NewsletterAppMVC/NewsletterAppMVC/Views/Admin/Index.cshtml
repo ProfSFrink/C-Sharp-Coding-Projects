@@ -1,7 +1,6 @@
 ﻿<!-- Advanced Software and Web Developer Diploma -->
 <!-- Part X: C# and .NET Framework - Part 2 -->
 <!-- by Pitman Training / The Tech Academy -->
-
 <!-- MODULE 12: Continuing to Develop in C# and MVC -->
 <!-- AUTHOR: Steven Partlow -->
 <!-- DATE: 06/03/2023 -->
@@ -26,10 +25,11 @@
             {
                 using (Html.BeginForm("Unsubscribe", "Admin", FormMethod.Post))
                 {
-                    <div class="row">
+                    <input type="hidden" name="id" value="@signup.Id" />
+                    <div class="row mb-3">
                         <!-- Create a row on the page -->
 
-                        <div class="col">
+                        <div class="col-2">
                             <!-- In this column, display the FirstName property of the current instance of the Model in signup -->
                             @signup.FirstName
                         </div> <!-- END DIV FirstName -->
@@ -39,12 +39,12 @@
                             @signup.LastName
                         </div> <!-- END DIV LastName -->
 
-                        <div class="col">
+                        <div class="col-4">
                             <!-- In this column, display the EmailAddress property of the current instance of the Model in signup -->
                             @signup.EmailAddress
                         </div> <!-- END DIV EmailAddress -->
 
-                        <div class = "col">
+                        <div class="col">
                             <!-- In this column, display a button called Unsubscribe  -->
                             <button type="submit" class="btn btn-danger btn-block">
                                 Unsubscribe
