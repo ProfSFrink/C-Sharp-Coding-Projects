@@ -1,21 +1,8 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Schema Namespace="InsuranceModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
-  <!--Errors Found During Generation:
-warning 6002: The table/view 'C:\USERS\PROFS\SOURCE\REPOS\C-SHARP-CODING-PROJECTS\CARINSURANCE\CARINSURANCE\APP_DATA\INSURANCE.MDF.dbo.Insurees' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
   <EntityType Name="Insurees">
     <Key>
       <PropertyRef Name="Id" />
-      <PropertyRef Name="FirstName" />
-      <PropertyRef Name="LastName" />
-      <PropertyRef Name="EmailAddress" />
-      <PropertyRef Name="DateOfBirth" />
-      <PropertyRef Name="CarYear" />
-      <PropertyRef Name="CarMake" />
-      <PropertyRef Name="CarModel" />
-      <PropertyRef Name="DUI" />
-      <PropertyRef Name="SpeedingTickets" />
-      <PropertyRef Name="CoverageType" />
-      <PropertyRef Name="Quote" />
     </Key>
     <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
     <Property Name="FirstName" Type="nvarchar" MaxLength="50" Nullable="false" />
@@ -31,21 +18,6 @@ warning 6002: The table/view 'C:\USERS\PROFS\SOURCE\REPOS\C-SHARP-CODING-PROJECT
     <Property Name="Quote" Type="money" Nullable="false" />
   </EntityType>
   <EntityContainer Name="InsuranceModelStoreContainer">
-    <EntitySet Name="Insurees" EntityType="Self.Insurees" store:Type="Tables" store:Schema="dbo">
-      <DefiningQuery>SELECT 
-    [Insurees].[Id] AS [Id], 
-    [Insurees].[FirstName] AS [FirstName], 
-    [Insurees].[LastName] AS [LastName], 
-    [Insurees].[EmailAddress] AS [EmailAddress], 
-    [Insurees].[DateOfBirth] AS [DateOfBirth], 
-    [Insurees].[CarYear] AS [CarYear], 
-    [Insurees].[CarMake] AS [CarMake], 
-    [Insurees].[CarModel] AS [CarModel], 
-    [Insurees].[DUI] AS [DUI], 
-    [Insurees].[SpeedingTickets] AS [SpeedingTickets], 
-    [Insurees].[CoverageType] AS [CoverageType], 
-    [Insurees].[Quote] AS [Quote]
-    FROM [dbo].[Insurees] AS [Insurees]</DefiningQuery>
-    </EntitySet>
+    <EntitySet Name="Insurees" EntityType="Self.Insurees" Schema="dbo" store:Type="Tables" />
   </EntityContainer>
 </Schema>
