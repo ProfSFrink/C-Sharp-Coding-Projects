@@ -4,7 +4,7 @@
 
 // MODULE 12: Continuing to Develop in C# and MVC
 // AUTHOR: Steven Partlow
-// DATE: 06/03/2023
+// DATE: 07/03/2023
 
 using NewsletterAppMVC.Models;
 using NewsletterAppMVC.ViewModels;
