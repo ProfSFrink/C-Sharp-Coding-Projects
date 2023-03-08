@@ -1,4 +1,12 @@
-﻿using System;
+﻿// Advanced Software and Web Developer Diploma
+// Part X: C# and .NET Framework - Part 2
+// by Pitman Training / The Tech Academy
+
+// MODULE 12: ASP.NET MVC Entity Framework Assignment
+// AUTHOR: Steven Partlow
+// DATE: 08/03/2023
+
+using System;
 using System.Collections.Generic;
 using System.Data;
 using System.Data.Entity;
@@ -10,8 +18,10 @@ using CarInsurance.Models;
 
 namespace CarInsurance.Controllers
 {
+
     public class InsureeController : Controller
     {
+
         private InsuranceEntities db = new InsuranceEntities();
 
         // GET: Insuree
@@ -50,10 +60,16 @@ namespace CarInsurance.Controllers
         {
             if (ModelState.IsValid)
             {
+                decimal quote = 50; // Variable to represent our insurance quote which start with an inital value of $50, this is of the decimal data type
+                var age = DateTime.Today.Year - insuree.DateOfBirth.Year; // Take year fron the current date and subtract the year from the user date of birth to work out there age
+
+                if (DateTime.Today.Month <= insuree.DateOfBirth.Month && DateTime.Today.Day < insuree.DateOfBirth.Day) { age -= 1; }
+
                 db.Insurees.Add(insuree);
                 db.SaveChanges();
                 return RedirectToAction("Index");
-            }
+
+            } // End IF
 
             return View(insuree);
         }
@@ -123,5 +139,7 @@ namespace CarInsurance.Controllers
             }
             base.Dispose(disposing);
         }
-    }
-}
+
+    } // End CLASS
+
+} // End NAMESPACE

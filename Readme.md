@@ -11,3 +11,5 @@ A ten-part video series developing a MVC Web application that allows a user to s
 
 ## Entity Framework
 We then take the sample MVC application we refer to above and add the entity framework library to the application so we can use it to map the connection between our newsletter application and our newsletter database, after we add the entity framework library to the application we then refactor all of the ADO.NET database calls with entity framework ones. Then we move onto updating the database by adding a removed column as a datetime type so we can track when people requested to be removed from the mailing list and only send mails to people on the list were the removed property is NULL, then we create a admin controller and move our admin method from the home controller to the new admin controller, then create a new admin view and again move code from the admin view to the new one.
+
+## ASP.NET MVC Entity Framework Assignment
