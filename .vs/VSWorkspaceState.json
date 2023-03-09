@@ -1,11 +1,7 @@
 {
   "ExpandedNodes": [
-    "",
-    "\\NewsletterAppMVC",
-    "\\NewsletterAppMVC\\NewsletterAppMVC",
-    "\\NewsletterAppMVC\\NewsletterAppMVC\\Views",
-    "\\NewsletterAppMVC\\NewsletterAppMVC\\Views\\Home"
+    ""
   ],
-  "SelectedNode": "\\NewsletterAppMVC\\NewsletterAppMVC\\Views\\Home\\Index.cshtml",
+  "SelectedNode": "\\NewsletterAppMVC.sln",
   "PreviewInSolutionExplorer": false
 }
