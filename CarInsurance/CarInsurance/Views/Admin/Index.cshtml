@@ -1,0 +1,74 @@
+﻿<!-- Advanced Software and Web Developer Diploma -->
+<!-- Part X: C# and .NET Framework - Part 2 -->
+<!-- by Pitman Training / The Tech Academy -->
+
+<!-- MODULE 12: ASP.NET MVC Entity Framework Assignment -->
+<!-- AUTHOR: Steven Partlow -->
+<!-- DATE: 10/03/2023 -->
+
+
+<!-- MAIN INDEX PAGE FOR ADMIN VIEW -->
+
+@using CarInsurance.ViewModels <!-- Use our AllQuotes View Model -->
+@model List<QuotesVm> /* The model this page will use is a list of AllQuotes View Model objects */
+
+<div class="row no-gutters m-3">
+    <!-- Create a row with no margin on either side and 3em margin at the top and bottom -->
+
+    <div class="card col mx-auto shadow">
+        <!-- Create a card which scale the number of columns depending on the size of the display that is auto-centered and has a shadow effect-->
+
+        <div class="card-header text-center">
+            <!-- Card header with h5 tag and no margin again centering the text -->
+
+            <h2 class="m-0">QUOTES ISSUED</h2>
+
+        </div> <!-- End DIV Card Header-->
+
+        <hr />
+
+        <div class="card-body"> <!-- The body of the card -->
+            @foreach (var quote in Model) /* Iterate through the passed in model and assign each element to the local instance of the model quote */
+            {
+                using (Html.BeginForm("Index", "Admin", FormMethod.Get))
+                {
+
+                    <input type="hidden" name="id" value="@quote.Id" /> <!-- Display the id but hide it from the view -->
+
+                    <div class="row mb-3">
+                        <!-- Create a row with a margin at the bottom of 3em -->
+
+                        <div class="col">
+                            <!-- Create a column 2em in width -->
+                            <label>First Name:&nbsp;</label>@quote.FirstName <!-- Display the current instance quote.FirstName in the View -->
+                        </div> <!-- End DIV Column-->
+
+                        <div class="col">
+                            <!-- Create a column 2em in width -->
+                            <label>Last Name:&nbsp;</label>@quote.LastName <!-- Display the current instance quote.LastName in the View -->
+                        </div> <!-- End DIV Column-->
+
+                        <div class="col">
+                            <!-- Create a column 2em in width -->
+                            <label>Email Address:&nbsp;</label>@quote.EmailAddress <!-- Display the current instance quote.EmailAddress in the View -->
+                        </div> <!-- End DIV Column-->
+
+                        <div class="col">
+                            <!-- Create a column 2em in width -->
+                            <label>Quote Issued:&nbsp;</label>@quote.Quote <!-- Display the current instance quote.Quote in the View -->
+                        </div> <!-- End DIV Column-->
+
+                        <hr />
+
+                    </div><!-- End DIV Row -->
+
+                }
+
+            }
+
+        </div> <!-- End DIV Card Body-->
+
+    </div> <!-- End DIV Card-->
+
+</div> <!-- End DIV Row -->
+
