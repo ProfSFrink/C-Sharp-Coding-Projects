@@ -1,7 +1,11 @@
 {
   "ExpandedNodes": [
-    ""
+    "",
+    "\\StudentMVC",
+    "\\StudentMVC\\StudentMVC",
+    "\\StudentMVC\\StudentMVC\\Views",
+    "\\StudentMVC\\StudentMVC\\Views\\Students"
   ],
-  "SelectedNode": "\\NewsletterAppMVC.sln",
+  "SelectedNode": "\\StudentMVC\\StudentMVC\\Views\\Students\\Index.cshtml",
   "PreviewInSolutionExplorer": false
 }

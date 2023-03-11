@@ -4,7 +4,7 @@
 
 // MODULE 12: ASP.NET MVC Entity Framework Assignment
 // AUTHOR: Steven Partlow
-// DATE: 10/03/2023
+// DATE: 11/03/2023
 
 // ADMIN CONTROLLER
 
@@ -41,7 +41,6 @@ namespace CarInsurance.Controllers
 
                     var quotesVm = new QuotesVm(); // Create a local instance of the QuotesVm View Model
 
-                    quotesVm.Id = quote.Id; // Map the current iteration of quote.id column to the quotesVm.Id property
                     quotesVm.FirstName = quote.FirstName; // Map the current iteration of quote.FirstName column to the quotesVm.FirstName property
                     quotesVm.LastName = quote.LastName; // Map the current iteration of quote.LastName column to the quotesVm.LastName property
                     quotesVm.EmailAddress = quote.EmailAddress; // Map the current iteration of quote.EmailAddress column to the quotesVm.EmailAddress property
