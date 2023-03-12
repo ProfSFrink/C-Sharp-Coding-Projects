@@ -1,0 +1,85 @@
+﻿body {
+    padding-top: 50px;
+    padding-bottom: 20px;
+}
+
+/* Set padding to keep content from hitting the edges */
+.body-content {
+    padding-left: 15px;
+    padding-right: 15px;
+}
+
+/* Override the default bootstrap behavior where horizontal description lists 
+   will truncate terms that are too long to fit in the left column 
+*/
+.dl-horizontal dt {
+    white-space: normal;
+}
+
+/* Set width on the form input elements since they're 100% wide by default */
+input,
+select,
+textarea {
+    max-width: 280px;
+}
+
+/* CUSTOM CSS STYLING */
+
+th {
+    color: white;
+    background-color: dodgerblue;
+}
+
+td {
+    font-weight: 700;
+    background-color: lightgrey;
+}
+
+/* CREATE VIEW STYLING */
+
+.form-horizontal {
+    border: 3px solid black;
+    padding-left: 5px;
+    box-shadow: 2px 2px grey;
+}
+
+.control-label {
+    color: dodgerblue;
+    text-shadow: 1px 1px black;
+}
+
+.form-control {
+    box-shadow: 1px 1px black;
+}
+
+/* ADMIN VIEW STYLING */
+
+.adminview {
+    background-color: ghostwhite;
+}
+
+.admincard {
+    border: 3px solid black;
+    box-shadow: 2px 2px grey;
+    margin-bottom: 4px;
+}
+
+.adminview h1, h3 {
+    text-shadow: 1px 1px black;
+}
+
+.adminview h3 {
+    border: 2px solid black;
+}
+
+dl {
+    
+}
+
+dt {
+    text-shadow: 1px 1px grey;    
+}
+
+dd {
+
+}
