@@ -51,20 +51,21 @@ namespace CarInsurance.Controllers
             return View();
         }
 
-        // POST: Insuree/Create
-        // To protect from overposting attacks, enable the specific properties you want to bind to, for 
-        // more details see https://go.microsoft.com/fwlink/?LinkId=317598.
-        [HttpPost]
+      
+        // This action is executed when the user clicks the Get your Quote button in the create view
+        [HttpPost] // This is post method
         [ValidateAntiForgeryToken]
+
+        // Take in the information that the insuree entered into the web form
         public ActionResult Create([Bind(Include = "Id,FirstName,LastName,EmailAddress,DateOfBirth,CarYear,CarMake,CarModel,DUI,SpeedingTickets,CoverageType")] Insuree insuree)
         {
             if (ModelState.IsValid)
             {
 
-                db.Insurees.Add(insuree);
-                db.SaveChanges();
+                db.Insurees.Add(insuree); // Add the insuree to the database
+                db.SaveChanges(); // Save the changes to the database
                 GenerateQuote(insuree.Id); // Generate quote for the current insuree ID
-                return RedirectToAction("Index");
+                return View("~/Views/Home/Success.cshtml");
 
             } // End IF
 
@@ -138,6 +139,8 @@ namespace CarInsurance.Controllers
             base.Dispose(disposing);
         }
 
+
+        /* The main business logic which generates the quote for the insuree has one parameter which is their id property */
         public ActionResult GenerateQuote(int Id)
         {
 
@@ -157,7 +160,7 @@ namespace CarInsurance.Controllers
                 var dui = insuree.DUI; // Variable to repsresent if the insuree has ever had a DUI
                 var coverageType = insuree.CoverageType; // Variable to represent the type of insurance coverage the insuree has
 
-                decimal quote = 50m; // Variable to represent our insurance quote which start with an inital value of $50, this is of the decimal data type as the quote is a monetary value
+                decimal quote = 50m; // Variable to represent our insurance quote which starts with an inital value of $50, this is of the decimal data type as the quote is a monetary value
 
                 /* BUSINESS LOGIC FOR CALCULATING INSUREE QUOTE */
 

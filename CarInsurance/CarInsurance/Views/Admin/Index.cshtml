@@ -16,7 +16,7 @@
     <!-- Create a row with no margin on either side and 3em margin at the top and bottom -->
     <div class="row no-gutters m-3 bg-secondary">
 
-        <h1 class="display-1 m-0 text-center">QUOTES ISSUED</h1>
+        <h1 class="display-1 m-0 text-center">ADMIN: ALL QUOTES ISSUED</h1>
 
         <hr />
 
@@ -48,9 +48,9 @@
                         <dt class="col-sm-3">EMAIL:</dt>
                         <dd class="col-sm-9">@quote.EmailAddress</dd>
 
-                        <!-- Diplay the current instance of quote.Quote with a label -->
+                        <!-- Diplay the current instance of quote.Quote with a label, we also round the quote to two decimal places -->
                         <dt class="col-sm-3">QUOTE:</dt>
-                        <dd class="col-sm-9">@quote.Quote</dd>
+                        <dd class="col-sm-9">@decimal.Round(quote.Quote, 2, MidpointRounding.AwayFromZero)</dd>
 
                     </dl>
 

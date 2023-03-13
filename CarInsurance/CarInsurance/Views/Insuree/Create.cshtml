@@ -1,11 +1,21 @@
-﻿@model CarInsurance.Models.Insuree
+﻿<!-- Advanced Software and Web Developer Diploma -->
+<!-- Part X: C# and .NET Framework - Part 2 -->
+<!-- by Pitman Training / The Tech Academy -->
+
+<!-- MODULE 12: ASP.NET MVC Entity Framework Assignment -->
+<!-- AUTHOR: Steven Partlow -->
+
+<!-- DATE: 11/03/2023 -->
+
+<!-- CREATE VIEW -->
+
+@model CarInsurance.Models.Insuree
 
 @{
     ViewBag.Title = "Create";
 }
-<body class="adminview">
+<body class="adminview"> <!-- Add the admin view class so we can add our own CSS styling to the form -->
     <h2>Generate your quote!</h2>
-
 
     @using (Html.BeginForm())
     {
@@ -101,14 +111,14 @@
 
             <div class="form-group">
                 <div class="col-md-offset-2 col-md-10">
-                    <input type="submit" value="CREATE" class="btn btn-primary" />
+                    <input type="submit" value="GET YOUR QUOTE" class="btn btn-primary" />
                 </div>
             </div>
         </div>
     }
 
     <div>
-        @Html.ActionLink("Home", "Index", "Home")
+        @Html.ActionLink("Return to Title Page", "Index", "Home")
     </div>
 
 </body>

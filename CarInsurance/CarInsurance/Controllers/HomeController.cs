@@ -1,4 +1,14 @@
-﻿using System;
+﻿// Advanced Software and Web Developer Diploma
+// Part X: C# and .NET Framework - Part 2
+// by Pitman Training / The Tech Academy
+
+// MODULE 12: ASP.NET MVC Entity Framework Assignment
+// AUTHOR: Steven Partlow
+// DATE: 13/03/2023
+
+// HOME CONTROLLER
+
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Web;

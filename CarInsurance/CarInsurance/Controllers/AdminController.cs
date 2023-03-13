@@ -4,7 +4,7 @@
 
 // MODULE 12: ASP.NET MVC Entity Framework Assignment
 // AUTHOR: Steven Partlow
-// DATE: 11/03/2023
+// DATE: 13/03/2023
 
 // ADMIN CONTROLLER
 
@@ -23,7 +23,9 @@ namespace CarInsurance.Controllers
     {
 
         // GET: Admin
-        public ActionResult Index()
+        // Type https://localhost:<portnumber>/Admin/Index in browser URL to access this page
+
+        public ActionResult Index() /* This action is executed everytime the main index page of the admin is loaded */
         {
 
             // Create new connection to the InsureanceEntities database called db
