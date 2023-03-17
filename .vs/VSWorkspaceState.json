@@ -1,10 +1,10 @@
 {
   "ExpandedNodes": [
     "",
-    "\\StudentMVC",
-    "\\StudentMVC\\StudentMVC",
-    "\\StudentMVC\\StudentMVC\\Views",
-    "\\StudentMVC\\StudentMVC\\Views\\Students"
+    "\\CarInsurance",
+    "\\CarInsurance\\CarInsurance",
+    "\\CarInsurance\\CarInsurance\\Controllers"
   ],
+  "SelectedNode": "\\CarInsurance\\CarInsurance\\Controllers\\InsureeController.cs",
   "PreviewInSolutionExplorer": false
 }

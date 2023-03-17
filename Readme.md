@@ -14,3 +14,6 @@ We then take the sample MVC application we refer to above and add the entity fra
 
 ## ASP.NET MVC Entity Framework Assignment
 An application that make use of both the MVC, Entity Framework and bootstrap to create a web application which generates a quote for a car insurance website and store the result into a database. We also have an Admin view to show the admin all the quotes that have been issued, (to access this enter: https://localhost:<localport>/Admin/Index in a browser URL). The business logic to generate the quote is a method within the Insuree Controller called GenerateQuote, and the Admin view utilises a View Model called QuotesVms to display all the quote to the site administrator.
+
+## FINAL ASSIGNMENT: Code First Database
+The final assignment of the course is to create a student database for a school using the code-first database approach to creating a database and then successfully add one student to the database.
