@@ -1,10 +1,9 @@
 {
   "ExpandedNodes": [
     "",
-    "\\CarInsurance",
-    "\\CarInsurance\\CarInsurance",
-    "\\CarInsurance\\CarInsurance\\Controllers"
+    "\\CodeFirstDBAssign",
+    "\\CodeFirstDBAssign\\CodeFirstDBAssign"
   ],
-  "SelectedNode": "\\CarInsurance\\CarInsurance\\Controllers\\InsureeController.cs",
+  "SelectedNode": "\\CodeFirstDBAssign\\CodeFirstDbAssign.sln",
   "PreviewInSolutionExplorer": false
 }
