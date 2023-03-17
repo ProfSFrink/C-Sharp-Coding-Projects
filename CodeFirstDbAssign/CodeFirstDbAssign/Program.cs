@@ -17,7 +17,7 @@ namespace CodeFirstDbAssign
         static void Main(string[] args)
         {
 
-            
+
         } // End MAIN
 
     } // End Program CLASS
