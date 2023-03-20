@@ -1,8 +1,8 @@
 # C-Sharp Coding Projects
 This repository covers the main projects done across both parts of the C# and .NET Framework course as part of my Advaced Software and Web Developer with Pitman Training / The Tech Academy.
 
-## Poker (TwentyOne) Game
-The Poker game we developed as part of the course, this works as a console application and allows the user to play a game of poker against the computer and gamble an amount each game, this application demonstrates object-orientated programming, inheritence, polymorphism, connecting to a database using ADO.NET, and creating a class library.  
+## Blackjack (TwentyOne) Game
+The Blackjack game we developed as part of the course, this works as a console application and allows the user to play a game of blackjack against the computer and gamble an amount each game, this application demonstrates object-orientated programming, inheritence, polymorphism, connecting to a database using ADO.NET, and creating a class library.  
 
 ## MVC Application - Students
 An application developed over eleven parts to show our understanding of the Model-View-Controller desgin pattern and demonstrate what we learned in the MVC Tutorial. This shows use of models, views and controllers and also being able to pass in parameters through a URL.
